@@ -3,6 +3,10 @@ class NonprofitsController < ApplicationController
     @nonprofits = Nonprofit.all
   end
 
+  def show
+    @nonprofit = Nonprofit.find(params[:id])
+  end
+
   def new
     @nonprofit = Nonprofit.new
   end
