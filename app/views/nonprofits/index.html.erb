@@ -1,0 +1,10 @@
+<h1>All Nonprofits</h1>
+<p>Pick a nonprofit you would like to donate money to</p>
+
+<ul>
+  <% @nonprofits.each do | nonprofit | %>
+    <li><%= nonprofit.name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Add a new nonprofit", new_nonprofit_path %>
