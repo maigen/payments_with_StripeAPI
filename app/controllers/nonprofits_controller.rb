@@ -3,10 +3,6 @@ class NonprofitsController < ApplicationController
     @nonprofits = Nonprofit.all
   end
 
-  def show
-    @nonprofit = Nonprofit.find(params[:id])
-  end
-
   def new
     @nonprofit = Nonprofit.new
   end
@@ -14,13 +10,17 @@ class NonprofitsController < ApplicationController
   def create
     @nonprofit = Nonprofit.new(nonprofit_params)
     if @nonprofit.save
-      redirect_to 'index', notice: "Nonprofit saved!"
+      redirect_to root_path, notice: "Nonprofit saved!"
     else
       render 'new', alert: "Please check your information and try again."
     end
   end
 
-  private
+  def show
+    @nonprofit = Nonprofit.find(params[:id])
+  end
+
+private
   def nonprofit_params
     params.require(:nonprofit).permit(:name)
   end

@@ -14,7 +14,8 @@ gem 'bcrypt'
 gem 'masonry-rails'
 gem 'devise'
 gem 'rest-client'
-
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'stripe'
 
 group :development do
   gem 'better_errors'

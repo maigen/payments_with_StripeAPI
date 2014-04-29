@@ -1,5 +1,5 @@
 <h1><%= @nonprofit.name %></h1>
 
+<p><%= link_to "Make a Donation!", new_nonprofit_payment_path(@nonprofit.id) %></p>
 
-
-<p><%= link_to "Return to Homepage", root_path %>
+<p><%= link_to "Return to Homepage", root_path %></p>

@@ -1,0 +1,7 @@
+<h1>All Donations</h1>
+
+<ul>
+  <% @payments.each do | payment | %>
+    <li><%= payment.amount %></li>
+  <% end %>
+</ul>

@@ -1,6 +1,7 @@
+<%= form_for @nonprofit do |f| %>
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %></div>
 
-
-<%= form_for (@nonprofit) do |f| %>
-  <%= f.text_field :name, :autofocus => true %>
-  <%= f.submit "Add Nonprofit" %>
+  <%= f.submit "Add Non Profit", class: "btn btn-primary" %>
 <% end %>
+

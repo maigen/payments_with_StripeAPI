@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'nonprofits#index'
 
-  resources :nonprofits
-  resources :payments
+  resources :nonprofits do
+    resources :payments
+  end
 end
